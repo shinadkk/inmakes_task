@@ -1,0 +1,23 @@
+//15
+import java.util.Scanner;
+
+public class SqureNumberPattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows for the pattern: ");
+        int rows = scanner.nextInt();
+
+        // Print the number pattern
+        for (int i = rows; i >= 1; i--) {
+            // Print numbers for the current row
+            for (int j = 1; j <= 5; j++) { // Assuming 5 columns based on the pattern
+                System.out.print(i + " ");
+            }
+            
+            // Move to the next line after each row
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            background-image: url(back1.jpg);
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background-size: cover;
+            background-attachment: scroll;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #d8d6d6;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 70%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .rule {
+            font-size: 0.9em;
+            color: #888;
+        }
+        button {
+            padding: 10px;
+            background-color: #40b985;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 50%;
+            align-self: center;
+        }
+        button:hover {
+            background-color: #1d513b;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Registration Form</h1>
+        <form action="#" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" maxlength="50" required>
+            <span class="rule">Max 50 characters allowed</span>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" maxlength="50" required>
+            <span class="rule">Max 50 characters allowed</span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" maxlength="10" pattern="\d{10}" required>
+            <span class="rule">10 digits allowed</span>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode" name="pincode" maxlength="6" pattern="\d{6}" required>
+            <span class="rule">6 digits allowed</span>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" maxlength="50" required>
+            <span class="rule">Max 50 characters allowed</span>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+
+            <label for="hobbies">Hobbies:</label>
+            <select id="hobbies" name="hobbies" multiple required>
+                <option value="travelling">Travelling</option>
+                <option value="singing">Singing</option>
+                <option value="dancing">Dancing</option>
+                <option value="cooking">Cooking</option>
+                <option value="others">Others</option>
+            </select>
+
+            <h3>Qualification</h3>
+            <table>
+                <tr>
+                    <th>Qualification</th>
+                    <th>Board</th>
+                    <th>Percentage</th>
+                    <th>Year of Passing</th>
+                </tr>
+                <tr>
+                    <td>Class 10</td>
+                    <td><input type="text" name="class10Board" maxlength="10" required></td>
+                    <td><input type="number" step="0.01" name="class10Percentage" required></td>
+                    <td><input type="text" name="class10Year" required></td>
+                </tr>
+                <tr>
+                    <td>Class 12</td>
+                    <td><input type="text" name="class12Board" maxlength="10" required></td>
+                    <td><input type="number" step="0.01" name="class12Percentage" required></td>
+                    <td><input type="text" name="class12Year" required></td>
+                </tr>
+                <tr>
+                    <td>UG</td>
+                    <td><input type="text" name="ugBoard" maxlength="10"></td>
+                    <td><input type="number" step="0.01" name="ugPercentage"></td>
+                    <td><input type="text" name="ugYear"></td>
+                </tr>
+                <tr>
+                    <td>PG</td>
+                    <td><input type="text" name="pgBoard" maxlength="10"></td>
+                    <td><input type="number" step="0.01" name="pgPercentage"></td>
+                    <td><input type="text" name="pgYear"></td>
+                </tr>
+                <tr>
+                    <td>PhD</td>
+                    <td><input type="text" name="phdBoard" maxlength="10"></td>
+                    <td><input type="number" step="0.01" name="phdPercentage"></td>
+                    <td><input type="text" name="phdYear"></td>
+                </tr>
+            </table>
+
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="bca">BCA</option>
+                <option value="bcom">BCOM</option>
+                <option value="bsc">BSC</option>
+                <option value="ba">BA</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

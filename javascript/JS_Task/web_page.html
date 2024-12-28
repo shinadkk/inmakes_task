@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        body {
+            background-color: purple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-container input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container input.valid {
+            border-color: green;
+        }
+        .form-container input.invalid {
+            border-color: red;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: purple;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: darkviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Create Account</h2>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password">
+        
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword">
+        
+        <button type="button" onclick="validateForm()">Submit</button>
+    </div>
+
+    <script>
+        function validateForm() {
+            const username = document.getElementById('username');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const confirmPassword = document.getElementById('confirmPassword');
+            
+            let valid = true;
+            
+            if (username.value.trim() === '') {
+                username.classList.add('invalid');
+                valid = false;
+            } else {
+                username.classList.remove('invalid');
+                username.classList.add('valid');
+            }
+            
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.value.trim() === '' || !emailPattern.test(email.value)) {
+                email.classList.add('invalid');
+                valid = false;
+            } else {
+                email.classList.remove('invalid');
+                email.classList.add('valid');
+            }
+            
+            if (password.value.trim() === '') {
+                password.classList.add('invalid');
+                valid = false;
+            } else {
+                password.classList.remove('invalid');
+                password.classList.add('valid');
+            }
+            
+            if (confirmPassword.value.trim() === '' || confirmPassword.value !== password.value) {
+                confirmPassword.classList.add('invalid');
+                valid = false;
+            } else {
+                confirmPassword.classList.remove('invalid');
+                confirmPassword.classList.add('valid');
+            }
+            
+            if (!valid) {
+                alert('Please fill in all fields correctly.');
+            } else {
+                alert('Form submitted successfully!');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socialbook</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0 auto; /* Center the body */
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #325dea;
+            padding: 5px 20px; /* Thinner navbar */
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar img {
+            margin-right: 15px;
+        }
+
+        .navbar .search-bar {
+            position: relative;
+        }
+
+        .navbar .search-bar input {
+            padding: 6px 10px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            padding-left: 28px;
+        }
+
+        .navbar .search-bar img {
+            position: absolute;
+            left: 10px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+        }
+
+        .navbar .profile-menu {
+            position: relative;
+        }
+
+        .navbar .profile-pic {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .navbar .online-indicator {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background-color: green;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        /* Container for 75% width */
+        .container {
+            width: 75%;
+            margin: 80px auto 0 auto; /* Adjust margin-top to account for navbar height */
+        }
+
+        /* Cover Photo and Profile Info */
+        .cover-photo {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            background-color: #ddd;
+        }
+
+        .cover-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            position: absolute;
+            bottom: -50px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .profile-info img {
+            border-radius: 50%;
+            border: 5px solid white;
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+        }
+
+        .profile-info .profile-details h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .profile-info .profile-details p {
+            font-size: 16px;
+        }
+
+        /* Mutual Friends Section */
+        .profile-content {
+            padding: 60px 20px 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .mutual-friends {
+            display: flex;
+            align-items: center;
+        }
+
+        .mutual-friends img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid white;
+            margin-right: 5px;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-buttons button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .action-buttons .add-friend-btn {
+            background-color: #42b72a;
+        }
+
+        .action-buttons .message-btn {
+            background-color: #1877f2;
+        }
+
+        .action-buttons img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+            <img src="notification.png" alt="Notifications" class="icon">
+            <img src="message.png" alt="Mail" class="icon">
+            <img src="video.png" alt="Media" class="icon">
+        </div>
+        <div class="navbar-right">
+            <div class="search-bar">
+                <img src="search.png" alt="Search Icon">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="profile-menu">
+                <img src="member-1.png" alt="Profile Picture" class="profile-pic">
+                <span class="online-indicator"></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Container for 75% width -->
+    <div class="container">
+        <!-- Cover Photo and Profile Section -->
+        <div class="cover-photo">
+            <img src="feed-image-3.png" alt="Cover Photo">
+            <div class="profile-info">
+                <img src="member-2.png" alt="Profile Picture">
+                <div class="profile-details">
+                    <h1>John Doe</h1>
+                    <p>500 Friends</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="profile-content">
+            <div class="mutual-friends">
+                <img src="member-3.png" alt="Mutual Friend 1">
+                <img src="member-4.png" alt="Mutual Friend 2">
+                <img src="member-5.png" alt="Mutual Friend 3">
+                <img src="member-6.png" alt="Mutual Friend 4">
+            </div>
+            <div class="action-buttons">
+                <button class="add-friend-btn">
+                    <img src="add-friends.png" alt="Add Friend Icon"> Add Friend
+                </button>
+                <button class="message-btn">
+                    <img src="message.png" alt="Message Icon"> Message
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

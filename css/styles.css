@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #efefef;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1876f2;
+    padding: 5px 5px;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    width: 160px;
+    margin-left: 45px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.nav-left ul li img {
+    width: 28px;
+    margin: 0 15px;
+}
+
+.search-box {
+    background: #efefef;
+    width: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.search-box img {
+    width: 18px;
+}
+
+.search-box input {
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 0;
+}
+
+.nav-right {
+    margin-right: 45px;
+}
+
+.nav-user-icon {
+    margin-left: 30px;
+    position: relative;
+}
+
+.nav-user-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.online {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.online::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #41db51;
+}
+
+.cover-photo {
+    width: 100%;
+    height: 200px;
+    background: url('feed-image-1.png') no-repeat center center/cover;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.user-details h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.user-details p {
+    font-size: 14px;
+    color: gray;
+}
+
+.friend-mutual {
+    display: flex;
+}
+
+.mutual-friend {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.friend-btn,
+.message-btn {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.friend-btn {
+    background-color: #1877f2;
+    color: white;
+}
+
+.message-btn {
+    background-color: #42b72a;
+    color: white;
+}
+
+.body-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 13px 5%;
+    background-color: aliceblue;
+    top: 70px;
+}
+
+.intro-section {
+    background-color: white;
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro-section h3 {
+    margin-bottom: 10px;
+}
+
+.intro-section ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.intro-section ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.status-update {
+    background-color: white;
+    flex: 2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.status-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.status-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f0f2f5;
+}
+
+.post-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.post-options button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #555;
+}
+
+.post-options button img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.post-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-details h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.post-details .post-time {
+    font-size: 12px;
+    color: gray;
+}
+
+.post-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.post-content a {
+    color: #1877f2;
+    text-decoration: none;
+}
+
+.post-content .hashtags {
+    color: #555;
+}
+
+.post-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.reaction {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.reaction p {
+    font-size: 14px;
+    color: #555;
+}
+
+.friends-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 300px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.friends-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.friends-header h3 {
+    font-size: 18px;
+}
+
+.view-all {
+    font-size: 14px;
+    color: #1877f2;
+    text-decoration: none;
+}
+
+.friends-count {
+    margin-bottom: 15px;
+}
+
+.total-friends {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.mutual-friends {
+    font-size: 14px;
+    color: gray;
+    margin-left: 5px;
+}
+
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.friend-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.body-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.left-column, .right-column {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-column {
+    grid-column: 1;
+}
+
+.right-column {
+    grid-column: 2;
+}
+
+.intro-section {
+    margin-bottom: 20px;
+}
+
+.friends-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.friends-count {
+    margin-bottom: 15px;
+}
+
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.friends-grid img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.status-update {
+    margin-bottom: 20px;
+}
+
+.status-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.post-box {
+    display: flex;
+    align-items: center;
+}
+
+.post-box img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-options button {
+    margin-right: 10px;
+    padding: 10px;
+    background-color: #e4e6eb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-container {
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-content p {
+    margin-bottom: 10px;
+}
+
+.post-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.post-footer .reaction {
+    display: flex;
+    align-items: center;
+}
+
+.post-footer .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.friend-btn {
+    background-color: #949ea9;
+    color: rgb(100, 85, 85);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 45px;
+}
+
+.friend-btn:hover {
+    background-color: #545e69;
+}
+
+.friend-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.message-btn {
+    background-color: #1876f2;
+    color: white;
+}
+
+.message-btn:hover {
+    background-color: #13509f;
+}
+
+.message-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.pro-body {
+    width: 80%;
+    margin: 0 auto;
+}

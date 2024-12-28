@@ -1,0 +1,8 @@
+FROM Employee e WHERE e.name LIKE 'A%'
+
+FROM Employee e WHERE e.salary BETWEEN 5000 AND 7000
+
+SELECT MIN(e.salary) FROM Employee e WHERE e.salary > (SELECT MIN(e2.salary)FROM Employee e2)
+
+SELECT MAX(e.salary)FROM Employee eWHERE e.salary < (SELECT MAX(e2.salary) FROM Employee e2)
+
